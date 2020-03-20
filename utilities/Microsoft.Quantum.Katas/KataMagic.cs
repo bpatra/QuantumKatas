@@ -139,9 +139,10 @@ namespace Microsoft.Quantum.Katas
             try
             {
                 var qsim = CreateSimulator();
-                qsim.DisableExceptionPrinting();
 
+                qsim.DisableExceptionPrinting();
                 qsim.DisableLogToConsole();
+
                 // Register all solutions to previously executed tasks (including the current one)
                 foreach (KeyValuePair<OperationInfo, OperationInfo> answer in AllAnswers) {
                     Logger.LogDebug($"Registering {answer.Key.FullName}");
