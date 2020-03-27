@@ -20,7 +20,7 @@ try {
 if ($install) {
     try {
         Write-Host ("Installing Microsoft.Quantum.IQSharp at $Env:TOOLS_DIR")
-        dotnet tool install Microsoft.Quantum.IQSharp --version 0.10.2002.2610 --tool-path $Env:TOOLS_DIR
+        dotnet tool install Microsoft.Quantum.IQSharp --version 1.2.3.4 --tool-path $Env:TOOLS_DIR
 
         $path = (Get-Item "$Env:TOOLS_DIR\dotnet-iqsharp*").FullName
         & $path install --user --path-to-tool $path
